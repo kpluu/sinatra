@@ -7,10 +7,11 @@
     <h3>Des potins en veux-tu en voilà !</h3>
     <p>Pour faire la pookie et balancer son gossip <a href="/gossips/new/">=> ici</a></p>
 
-    <% gossips.each do |gossip| %>
+    <% gossips.each_with_index do |gossip, index| %>
       <p>
         <%= gossip.author %><br/>
         <%= gossip.content %>
+        <a href="/gossips/<%=index%>/">voir gossip</a>
       </p>
     <% end %>
 

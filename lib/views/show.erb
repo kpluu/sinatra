@@ -5,14 +5,11 @@
   <body>
     <h1>PAGE POTIN</h1>
     <p>Voici la page du potin  </p>
-
-    <% gossip.each do |gossip| %>
         <p>
-        Voici la page du potin <%= gossip.id %><br/>
-        Son auteur : <%= gossip.author %><br/>
-        Le contenu du potin : <%= gossip.content %>
+        Voici la page du potin number <%=params[:id]%> <br/>
+        Son auteur : <%= gossip.author%><br/>
+        Le contenu du potin : <%= gossip.content%><br/>
         </p>
-      <% end %>
 
     <a href="/">Retour à la page d'accueil</a>
 
