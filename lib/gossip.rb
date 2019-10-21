@@ -7,7 +7,6 @@ class Gossip
     def initialize(author, content)
         @author = author
         @content = content
-        @id = id
     end
 
     def save
@@ -22,6 +21,10 @@ class Gossip
         all_gossips << Gossip.new(csv_line[0], csv_line[1])
     end
     return all_gossips
+    end
+
+    def self.find(id)
+        self.all[id.to_i]
     end
     
 end
